@@ -93,3 +93,5 @@ kubectl apply -f redis-enterprise-cluster.yaml
 
 
 
+10. [Setup an OpenShift TLS Route to expose a BDB to external access]( https://docs.google.com/document/d/1ewhQOxQwqU-_fPs6vff4_lu6azx1PkxCdkCwupzNFtg/edit) By Ted Haile
+
