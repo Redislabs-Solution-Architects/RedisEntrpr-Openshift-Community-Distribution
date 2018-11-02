@@ -66,7 +66,7 @@ kubectl apply -f crd.yaml
 kubectl apply -f operator.yaml
 kubectl apply -f redis-storage-class.yaml
 kubectl apply -f redis-storage.yaml 
-
+kubectl apply -f redis-enterprise-cluster.yaml
 ```
 
 
