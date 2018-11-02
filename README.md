@@ -49,9 +49,25 @@ export PASSWORD=admin
 
 ./install-openshift.sh
 
-cd 
 ```
 
+6. Install Redis Enterprise. Based on [redis-enterprise-k8s-docs](https://github.com/RedisLabs/redis-enterprise-k8s-docs#configuration)
+
+```bash
+
+cd 
+git clone https://github.com/Redislabs-Solution-Architects/RedisEntrpr-Openshift-Community-Distribution.git
+cd RedisEntrpr-Openshift-Community-Distribution
+oc new-project my-project
+oc apply -f scc.yaml
+oc adm policy add-scc-to-group redis-enterprise-scc system:serviceaccounts:my-project
+kubectl apply -f rbac.yaml
+kubectl apply -f crd.yaml
+kubectl apply -f operator.yaml
+kubectl apply -f redis-storage-class.yaml
+kubectl apply -f redis-storage.yaml 
+
+```
 
 
 
