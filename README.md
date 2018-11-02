@@ -72,6 +72,8 @@ kubectl apply -f redis-storage.yaml
 kubectl apply -f redis-enterprise-cluster.yaml
 ```
 
+8. Setting up route to Redis UI
 
+![Route 1](/images/route1.png)
 
 
