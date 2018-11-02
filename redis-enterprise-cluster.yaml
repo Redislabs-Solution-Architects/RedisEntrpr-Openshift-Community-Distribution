@@ -11,10 +11,10 @@ spec:
   username: "admin@acme.com"
   redisEnterpriseNodeResources:
     limits:
-      cpu: "400m"
+      cpu: "4000m"
       memory: 4Gi
     requests:
-      cpu: "400m"
+      cpu: "4000m"
       memory: 4Gi
   redisEnterpriseImageSpec:
     imagePullPolicy:  IfNotPresent
