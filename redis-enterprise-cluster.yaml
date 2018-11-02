@@ -1,0 +1,22 @@
+apiVersion: "app.redislabs.com/v1alpha1"
+kind: "RedisEnterpriseCluster"
+metadata:
+  name: "redis-enterprise-cluster"
+spec:
+  nodes: 1
+  persistentSpec:
+    enabled: true
+    #volumeSize: "10Gi" # if you don't provide default is 5 times RAM size
+    storageClassName: "redis-storage" # ! edit according to infrastructure
+  username: "admin@acme.com"
+  redisEnterpriseNodeResources:
+    limits:
+      cpu: "400m"
+      memory: 4Gi
+    requests:
+      cpu: "400m"
+      memory: 4Gi
+  redisEnterpriseImageSpec:
+    imagePullPolicy:  IfNotPresent
+    Repository:       redislabs/redis
+    versionTag:       5.2.2-22
