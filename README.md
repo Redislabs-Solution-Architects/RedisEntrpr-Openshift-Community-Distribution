@@ -72,6 +72,22 @@ kubectl apply -f redis-storage.yaml
 kubectl apply -f redis-enterprise-cluster.yaml
 ```
 
+8. Setting up route to Redis UI
+
+![Route 1](/images/route1.png)
+
+![Route 2](/images/route2.png)
+
+ You can access the Redis UI from Hostname URL
+ 
+![Route 3](/images/route3.png)
+
+
+9. Find the Redis User and Password
+
+![secret 1](/images/secret1.png)
+
+![secret 2](/images/secret2.png)
 
 
 
