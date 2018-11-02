@@ -75,5 +75,6 @@ kubectl apply -f redis-enterprise-cluster.yaml
 8. Setting up route to Redis UI
 
 ![Route 1](/images/route1.png)
-
+![Route 2](/images/route2.png)
+![Route 3](/images/route3.png)
 
