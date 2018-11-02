@@ -89,5 +89,7 @@ kubectl apply -f redis-enterprise-cluster.yaml
 
 ![secret 2](/images/secret2.png)
 
+![secret 3](/images/secret3.png)
+
 
 
