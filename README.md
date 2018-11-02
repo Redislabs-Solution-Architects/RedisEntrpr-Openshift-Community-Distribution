@@ -48,6 +48,8 @@ export USERNAME=admin
 export PASSWORD=admin
 
 ./install-openshift.sh
+
+cd 
 ```
 
 
