@@ -51,7 +51,10 @@ export PASSWORD=admin
 
 ```
 
-6. Install Redis Enterprise. Based on [redis-enterprise-k8s-docs](https://github.com/RedisLabs/redis-enterprise-k8s-docs#configuration)
+6. Access the UI from https://console.{Public IP}.nip.io:8443
+
+
+7. Install Redis Enterprise. Based on [redis-enterprise-k8s-docs](https://github.com/RedisLabs/redis-enterprise-k8s-docs#configuration)
 
 ```bash
 
