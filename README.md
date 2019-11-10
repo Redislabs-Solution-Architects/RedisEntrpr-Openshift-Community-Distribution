@@ -34,7 +34,8 @@ exit
 4. Clone the repo
 
 ```bash
-git clone https://github.com/gshipley/installcentos.git
+
+git clone https://github.com/okd-community-install/installcentos
 
 ```
 
