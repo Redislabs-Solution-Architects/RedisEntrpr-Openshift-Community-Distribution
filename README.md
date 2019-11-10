@@ -52,6 +52,8 @@ export PASSWORD=admin
 
 ```
 
+Note: Installtion takes time... (45-60 minutes is normal)
+
 6. Access the UI from https://console.{Public IP}.nip.io:8443
 
 
