@@ -5,10 +5,10 @@
   
 Requirement  | Specification  
 ------------ | -------------
-CPU | 8
-Memory | 64 GB
+CPU | 8 (16 cores for "full" cluster)
+Memory | at least 64 GB
 OS | Cent OS 7
-Disk | 30 GB
+Disk | 100 GB
 
 2. ssh to the machine
 
