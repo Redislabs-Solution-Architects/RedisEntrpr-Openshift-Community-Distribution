@@ -62,9 +62,9 @@ export PASSWORD=admin
 cd 
 git clone https://github.com/Redislabs-Solution-Architects/RedisEntrpr-Openshift-Community-Distribution.git
 cd RedisEntrpr-Openshift-Community-Distribution
-oc new-project my-project
+oc new-project {my-project}
 oc apply -f scc.yaml
-oc adm policy add-scc-to-group redis-enterprise-scc system:serviceaccounts:my-project
+oc adm policy add-scc-to-group redis-enterprise-scc system:serviceaccounts:{my-project}
 kubectl apply -f rbac.yaml
 kubectl apply -f crd.yaml
 kubectl apply -f operator.yaml
