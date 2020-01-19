@@ -23,7 +23,7 @@ spec:
   redisEnterpriseServicesRiggerImageSpec:
     imagePullPolicy:  IfNotPresent
     repository:       redislabs/k8s-controller
-    versionTag:       5.4.10-8b.rhel77
+    versionTag:       5.4.10-8.rhel7
   podAntiAffinity: # disable anti affinity to allow loading multiple pods on the same node
     RequiredDuringSchedulingIgnoredDuringExecution:
       namespaces:
