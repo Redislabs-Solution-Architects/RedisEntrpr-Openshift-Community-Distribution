@@ -67,9 +67,7 @@ cd RedisEntrpr-Openshift-Community-Distribution
 oc new-project {my-project}
 oc apply -f scc.yaml
 oc adm policy add-scc-to-group redis-enterprise-scc system:serviceaccounts:{my-project}
-kubectl apply -f rbac.yaml
-kubectl apply -f crd.yaml
-kubectl apply -f operator.yaml
+kubectl apply -f bundle.yaml
 kubectl apply -f redis-storage-class.yaml
 kubectl apply -f redis-storage.yaml 
 kubectl apply -f redis-enterprise-cluster.yaml
