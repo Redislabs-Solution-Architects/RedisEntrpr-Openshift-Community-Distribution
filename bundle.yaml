@@ -1,4 +1,13 @@
 ---
+kind: ClusterRole
+apiVersion: rbac.authorization.k8s.io/v1
+metadata:
+  name: redis-enterprise-operator-sb
+rules:
+- apiGroups: ["servicecatalog.k8s.io"]
+  resources: ["clusterservicebrokers"]
+  verbs: ["*"]
+---
 kind: Role
 apiVersion: rbac.authorization.k8s.io/v1
 metadata:
@@ -56,6 +65,11 @@ rules:
     resources: ["ingresses"]
     verbs: ["*"]
 ---
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: redis-enterprise-operator
+---
 kind: RoleBinding
 apiVersion: rbac.authorization.k8s.io/v1
 metadata:
@@ -67,11 +81,6 @@ roleRef:
   kind: Role
   name: redis-enterprise-operator
   apiGroup: rbac.authorization.k8s.io
----
-apiVersion: v1
-kind: ServiceAccount
-metadata:
-  name: redis-enterprise-operator
 ---
 apiVersion: apiextensions.k8s.io/v1beta1
 kind: CustomResourceDefinition
@@ -112,11 +121,12 @@ spec:
       labels:
         name: redis-enterprise-operator
     spec:
-      serviceAccountName: redis-enterprise-operator
+      serviceAccount: redis-enterprise-operator
       containers:
         - name: redis-enterprise-operator
-          # Replace this with the built image name
-          image: redislabs/operator:5.4.10-8
+          image: redislabs/operator:5.4.10-8.rhel7
+          securityContext:
+            runAsUser: 1001
           command:
           - redis-enterprise-operator
           imagePullPolicy: Always
@@ -129,6 +139,4 @@ spec:
               valueFrom:
                 fieldRef:
                   fieldPath: metadata.name
-            - name: OPERATOR_NAME
-              value: "redis-enterprise-operator"
 ---
